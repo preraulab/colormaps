@@ -1,4 +1,4 @@
-function map = redbluemap(N, white_prct)
+function map = redbluemap(N_raw, white_prct)
 %REDBLUEMAP  Creates a red blue colormap
 %
 %   Usage:
@@ -36,14 +36,16 @@ if nargin<2
 end
 
 %Create the blue and red components
-blue_part=[linspace(1,0,N)',linspace(1,0,N)',ones(N,1)];
-red_part=[ones(N,1),linspace(0,1,N)',linspace(0,1,N)'];
+N_raw = 1000; %Starting N before interpolation
+
+blue_part=[linspace(1,0,N_raw)',linspace(1,0,N_raw)',ones(N_raw,1)];
+red_part=[ones(N_raw,1),linspace(0,1,N_raw)',linspace(0,1,N_raw)'];
 
 %Create the white component
 if white_prct==0
     num_white=1;
 else
-    num_white=round((white_prct*2*N)/(1-white_prct));
+    num_white=round((white_prct*2*N_raw)/(1-white_prct));
 end
 white_part=ones(num_white,3);
 
