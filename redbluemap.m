@@ -54,6 +54,6 @@ map_raw=[red_part; white_part; blue_part];
 Nr = size(map_raw,1);
 
 %Interpolate to correct size
-map(:,1) = interp1(linspace(0,1,Nr), map_raw(:,1), linspace(0,1,N));
-map(:,2) = interp1(linspace(0,1,Nr), map_raw(:,2), linspace(0,1,N));
-map(:,3) = interp1(linspace(0,1,Nr), map_raw(:,3), linspace(0,1,N));
+map(:,1) = interp1(linspace(0,1,Nr), map_raw(:,1), linspace(0,1,N_raw));
+map(:,2) = interp1(linspace(0,1,Nr), map_raw(:,2), linspace(0,1,N_raw));
+map(:,3) = interp1(linspace(0,1,Nr), map_raw(:,3), linspace(0,1,N_raw));
