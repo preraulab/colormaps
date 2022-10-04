@@ -273,7 +273,7 @@ map = [0.091874 0.160934 0.446902
        0.410078 0.027551 0.011092
        0.400282 0.027868 0.008951];
 
-if nargin>0 && ~isempty(N) && N < size(map,1)
+if nargin>0 && ~isempty(N)
         tmap = map;
         tN = size(tmap,1);
         map = zeros(N,3);

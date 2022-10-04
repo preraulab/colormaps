@@ -27,16 +27,13 @@ function map = redbluemap(N_raw, white_prct)
 
 %Set default N
 if nargin<1
-    N=1024;
+    N_raw=1024;
 end
 
 %Set default percentage of white
 if nargin<2
     white_prct=.01;
 end
-
-%Create the blue and red components
-N_raw = 1000; %Starting N before interpolation
 
 blue_part=[linspace(1,0,N_raw)',linspace(1,0,N_raw)',ones(N_raw,1)];
 red_part=[ones(N_raw,1),linspace(0,1,N_raw)',linspace(0,1,N_raw)'];
