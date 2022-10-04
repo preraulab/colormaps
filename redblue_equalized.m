@@ -6,6 +6,7 @@ function map = redblue_equalized(N_raw, min_lux, white_prct)
 %
 %   Input:
 %   N: number of points (default: 1024)
+%   min_lux: double - minimum lux value to equalize edges (cannot be below 0.25)
 %   white_prct: percent white in the middle (default: 0.01)
 %
 %   Output:
