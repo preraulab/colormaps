@@ -1,12 +1,12 @@
-function cmap_new = equalize_divcmap(cmap,min_lux, N, plot_on)
-%% EQUALIZE_DIVCMAP Equalizes lux for divergent colormaps
+function cmap_new = equalize_divcmap(cmap,min_L, N, plot_on)
+%% EQUALIZE_DIVCMAP Equalizes CIELAB lightness for divergent colormaps
 %
 %   Usage:
-%   cmap_new = equalize_divcmap(cmap, min_lux, N, plot_on)
+%   cmap_new = equalize_divcmap(cmap, min_L, N, plot_on)
 %
 %   Input:
 %   cmap: N x 3 divergent colormap
-%   min_lux: minimum lux on either end (default: .3)
+%   min_L: minimum lux on either end (default:30)
 %   N: Number of points in colormap (final N will be odd to keep max value)
 %   plot_on: plot output (default: false)
 %
@@ -22,12 +22,12 @@ function cmap_new = equalize_divcmap(cmap,min_lux, N, plot_on)
 %********************************************************************
 if nargin == 0
     cmap = redbluedark;
-    equalize_divcmap(cmap,.3,500,true);
+    equalize_divcmap(cmap,30,500,true);
     return;
 end
 
 if nargin<2
-    min_lux = .3;
+    min_L = .3;
 end
 
 if nargin<3
@@ -38,16 +38,16 @@ if nargin<4
     plot_on = false;
 end
 
-%Compute lux
-lux = luminosity(cmap);
-assert(~issorted(lux),'Must be divergent colormap')
+%Compute L
+L = getL(cmap);
+assert(~issorted(L,'monotonic'),'Must be divergent colormap');
 
 %Find max lux
-[~,imax] = max(lux);
+[~,imax] = max(L);
 
 %Find edges of lux
-istart = find(lux>= min_lux,1,'first');
-iend = find(lux>=min_lux,1,'last');
+istart = find(L>= min_L,1,'first');
+iend = find(L>=min_L,1,'last');
 
 %Interpolate ramp up
 Rup = interp1(istart:imax,cmap(istart:imax,1),linspace(istart,imax,floor(N/2)))';
@@ -82,12 +82,17 @@ if plot_on
 
     figure
     hold all
-    plot(interp1(linspace(0,1,size(cmap,1)),luminosity(cmap),linspace(0,1,500)));
-    plot(interp1(linspace(0,1,size(cmap_new,1)),luminosity(cmap_new),linspace(0,1,500)));
+    plot(interp1(linspace(0,1,size(cmap,1)),getL(cmap),linspace(0,1,500)));
+    plot(interp1(linspace(0,1,size(cmap_new,1)),getL(cmap_new),linspace(0,1,500)));
     legend('Original','Equalized')
-    ylabel('Luminosity (lux)')
+    ylabel('Lightness (L*a*b)')
 
 end
+
+function L = getL(cmap)
+LAB = rgb2lab(cmap);
+L = LAB(:,1);
+
 
 
 
