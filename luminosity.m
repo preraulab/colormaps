@@ -17,7 +17,7 @@ function lux = luminosity(RGB_mat)
 %
 %     plot(luminosity(jet));
 %
-%   Copyright 2022 Michael J. Prerau, Ph.D. - http://www.sleepEEG.org
+%   Copyright 2024 Michael J. Prerau, Ph.D. - http://www.sleepEEG.org
 %
 %********************************************************************
 

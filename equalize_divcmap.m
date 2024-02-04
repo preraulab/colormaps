@@ -17,7 +17,7 @@ function cmap_new = equalize_divcmap(cmap,min_L, N, plot_on)
 %
 %     equalize_divcmap; %Run demo
 %
-%   Copyright 2022 Michael J. Prerau, Ph.D. - http://www.sleepEEG.org
+%   Copyright 2024 Michael J. Prerau, Ph.D. - http://www.sleepEEG.org
 %
 %********************************************************************
 if nargin == 0

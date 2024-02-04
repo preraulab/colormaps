@@ -19,7 +19,7 @@ function map = redblue_equalized(N_raw, min_L, white_prct)
 %     colormap(redblue_equalized);
 %     caxis([-8 8]); %Must set +- caxes to be equal magnitude to center on zero
 %
-%   Copyright 2022 Michael J. Prerau, Ph.D. - http://www.sleepEEG.org
+%   Copyright 2024 Michael J. Prerau, Ph.D. - http://www.sleepEEG.org
 %
 %   Last modified 02/19/2022
 %********************************************************************
