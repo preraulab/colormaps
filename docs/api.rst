@@ -1,54 +1,56 @@
 API Reference
 =============
 
-Auto-generated reference for ``colormaps``.
-
 Root
 ----
 
-.. mat:module:: .
+.. toctree::
+   :maxdepth: 1
 
-.. mat:autofunction:: blueredbluemap
-.. mat:autofunction:: colorcet
-.. mat:autofunction:: equalize_divcmap
-.. mat:autofunction:: gouldian
-.. mat:autofunction:: hotcoolmap
-.. mat:autofunction:: inferno
-.. mat:autofunction:: luminosity
-.. mat:autofunction:: magma
-.. mat:autofunction:: plasma
-.. mat:autofunction:: rainbow4
-.. mat:autofunction:: redblue_equalized
-.. mat:autofunction:: redbluedark
-.. mat:autofunction:: redbluelight
-.. mat:autofunction:: redbluemap
-.. mat:autofunction:: viridis
+   api/blueredbluemap
+   api/colorcet
+   api/equalize_divcmap
+   api/gouldian
+   api/hotcoolmap
+   api/inferno
+   api/luminosity
+   api/magma
+   api/plasma
+   api/rainbow4
+   api/redblue_equalized
+   api/redbluedark
+   api/redbluelight
+   api/redbluemap
+   api/viridis
 
 CMRmap
 ------
 
-.. mat:module:: CMRmap
+.. toctree::
+   :maxdepth: 1
 
-.. mat:autofunction:: CMRmap
+   api/CMRmap
 
 cubehelix
 ---------
 
-.. mat:module:: cubehelix
+.. toctree::
+   :maxdepth: 1
 
-.. mat:autofunction:: cubehelix
-.. mat:autofunction:: cubehelix_find
-.. mat:autofunction:: cubehelix_view
+   api/cubehelix
+   api/cubehelix_find
+   api/cubehelix_view
 
 pmkmp
 -----
 
-.. mat:module:: pmkmp
+.. toctree::
+   :maxdepth: 1
 
-.. mat:autofunction:: CompareLabPlotsUsingColorspace
-.. mat:autofunction:: MakeLabPlotUsingColorspace
-.. mat:autofunction:: example2
-.. mat:autofunction:: examples
-.. mat:autofunction:: examples1
-.. mat:autofunction:: pmkmp
+   api/CompareLabPlotsUsingColorspace
+   api/example2
+   api/examples
+   api/examples1
+   api/MakeLabPlotUsingColorspace
+   api/pmkmp
 
