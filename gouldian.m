@@ -17,7 +17,6 @@ function map = gouldian(N)
 % peter.kovesi at uwa edu au
 %
 %   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
-%        Source: https://github.com/preraulab/labcode_main
 
 map = [0.189342 0.189388 0.189376
        0.193131 0.190712 0.199397

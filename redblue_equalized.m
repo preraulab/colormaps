@@ -24,7 +24,6 @@ function map = redblue_equalized(N_raw, min_L, white_prct)
 %   See also: equalize_divcmap, redbluemap, blueredbluemap, luminosity, colormap
 %
 %   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
-%        Source: https://github.com/preraulab/labcode_main
 
 %Set default N
 if nargin<1

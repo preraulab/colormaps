@@ -21,7 +21,6 @@ function map = hotcoolmap(N, trim_pct)
 %   See also: colormap, hot, redbluemap, redblue_equalized, blueredbluemap
 %
 %   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
-%        Source: https://github.com/preraulab/labcode_main
 
 %Set default size
 if nargin < 1

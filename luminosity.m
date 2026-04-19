@@ -16,7 +16,6 @@ function lux = luminosity(RGB_mat)
 %   See also: equalize_divcmap, redblue_equalized, colormap
 %
 %   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
-%        Source: https://github.com/preraulab/labcode_main
 
 
 assert(max(RGB_mat,[],'all')<= 1 && min(RGB_mat,[],'all')>=0, 'Error RGB values must be between 0 and 1')

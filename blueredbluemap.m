@@ -15,7 +15,6 @@ function col = blueredbluemap(N,wp)
 %   See also: colormap, redbluemap, redblue_equalized, hotcoolmap
 %
 %   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
-%        Source: https://github.com/preraulab/labcode_main
 
 
 if nargin<1

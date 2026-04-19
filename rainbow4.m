@@ -17,7 +17,6 @@ function map = rainbow4(N)
 % peter.kovesi at uwa edu au
 %
 %   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
-%        Source: https://github.com/preraulab/labcode_main
 
 map = [0.014954 0.001872 0.425144
        0.015287 0.001815 0.436691

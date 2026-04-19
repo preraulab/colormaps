@@ -19,7 +19,6 @@ function cm_data=plasma(m)
 %   See also: colormap, viridis, inferno, magma, cividis
 %
 %   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
-%        Source: https://github.com/preraulab/labcode_main
 
 cm = [[  5.03832136e-02,   2.98028976e-02,   5.27974883e-01],
        [  6.35363639e-02,   2.84259729e-02,   5.33123681e-01],

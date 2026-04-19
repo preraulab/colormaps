@@ -19,7 +19,6 @@ function [cm_data]=inferno(m)
 %   See also: colormap, viridis, plasma, magma, cividis
 %
 %   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
-%        Source: https://github.com/preraulab/labcode_main
 
 cm = [[  1.46159096e-03,   4.66127766e-04,   1.38655200e-02],
        [  2.26726368e-03,   1.26992553e-03,   1.85703520e-02],

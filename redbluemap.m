@@ -21,7 +21,6 @@ function map = redbluemap(N_raw, white_prct)
 %   See also: colormap, redblue_equalized, blueredbluemap, hotcoolmap
 %
 %   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
-%        Source: https://github.com/preraulab/labcode_main
 
 %Set default N
 if nargin<1

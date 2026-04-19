@@ -21,7 +21,6 @@ function cmap_new = equalize_divcmap(cmap,min_L, N, plot_on)
 %   See also: redblue_equalized, luminosity, redbluedark, colormap
 %
 %   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
-%        Source: https://github.com/preraulab/labcode_main
 
 if nargin == 0
     cmap = redbluedark;
