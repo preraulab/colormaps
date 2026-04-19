@@ -15,6 +15,9 @@ function map = redbluedark(N)
 % Centre for Exploration Targeting
 % The University of Western Australia
 % peter.kovesi at uwa edu au
+%
+%   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
+%        Source: https://github.com/preraulab/labcode_main
 
 map = [0.091874 0.160934 0.446902
        0.093320 0.165181 0.458168

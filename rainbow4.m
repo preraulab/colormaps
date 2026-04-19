@@ -1,5 +1,5 @@
 function map = rainbow4(N)
-
+%RAINBOW4 colormap
 % These colour maps are released under the Creative Commons BY License.
 % A summary of the conditions can be found at
 % https://creativecommons.org/licenses/by/4.0/
@@ -15,6 +15,9 @@ function map = rainbow4(N)
 % Centre for Exploration Targeting
 % The University of Western Australia
 % peter.kovesi at uwa edu au
+%
+%   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
+%        Source: https://github.com/preraulab/labcode_main
 
 map = [0.014954 0.001872 0.425144
        0.015287 0.001815 0.436691
@@ -274,7 +277,7 @@ map = [0.014954 0.001872 0.425144
        0.841830 0.020321 0.052053];
 
 
-if nargin>0 && ~isempty(N) 
+if nargin>0 && ~isempty(N) && N < size(map,1)
         tmap = map;
         tN = size(tmap,1);
         map = zeros(N,3);

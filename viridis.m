@@ -1,4 +1,26 @@
 function cm_data=viridis(m)
+%VIRIDIS  Perceptually uniform blue-green-yellow colormap (matplotlib port)
+%
+%   Usage:
+%       cm_data = viridis(m)
+%
+%   Inputs:
+%       m : integer - number of colors to return (default: size of the
+%                     built-in 256-row table)
+%
+%   Outputs:
+%       cm_data : Mx3 double - RGB colormap in [0, 1]
+%
+%   Notes:
+%       Colormap values are taken from matplotlib's "viridis" by
+%       Nathaniel J. Smith, Stefan van der Walt, and Eric Firing
+%       (CC0 / BSD-compatible). See https://bids.github.io/colormap/.
+%
+%   See also: colormap, plasma, inferno, magma, cividis
+%
+%   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
+%        Source: https://github.com/preraulab/labcode_main
+
 cm = [[ 0.26700401,  0.00487433,  0.32941519],
        [ 0.26851048,  0.00960483,  0.33542652],
        [ 0.26994384,  0.01462494,  0.34137895],

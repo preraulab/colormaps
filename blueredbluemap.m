@@ -1,14 +1,28 @@
-
-% Red and blue color map
 function col = blueredbluemap(N,wp)
-% to transition from blue to white to red to white to blue so that the
-% peak is at 0 and the troughs are at pi and -pi 
+%BLUEREDBLUEMAP  Cyclic blue-white-red-white-blue colormap centered at zero
+%
+%   Usage:
+%       col = blueredbluemap(N, wp)
+%
+%   Inputs:
+%       N  : integer - number of points per colored segment (default: 1024)
+%       wp : double  - fraction of the map occupied by each white band (default: 0.01)
+%
+%   Outputs:
+%       col : Nx3 double - RGB colormap that transitions blue->white->red->white->blue,
+%             with the red peak at 0 and blue troughs at +/- pi
+%
+%   See also: colormap, redbluemap, redblue_equalized, hotcoolmap
+%
+%   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
+%        Source: https://github.com/preraulab/labcode_main
 
-if nargin<2
+
+if nargin<1
     N=1024;
 end
 
-if nargin<1
+if nargin<2
     wp=.01;
 end
 

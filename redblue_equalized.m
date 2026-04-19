@@ -1,28 +1,30 @@
 function map = redblue_equalized(N_raw, min_L, white_prct)
-%REDBLUE_EQUALIZED Creates a red blue colormap equalized in L in  CIELAB
+%REDBLUE_EQUALIZED  Red-white-blue divergent colormap with equalized CIELAB lightness
 %
 %   Usage:
-%   map = redblue_equalized(N, min_L, white_prct)
+%       map = redblue_equalized(N, min_L, white_prct)
 %
-%   Input:
-%   N: number of points (default: 1024)
-%   min_L: double - minimum L value to equalize edges (cannot be below 53.5)
-%   white_prct: percent white in the middle (default: 0.01)
+%   Inputs:
+%       N          : integer - number of points in the output colormap (default: 1024)
+%       min_L      : double  - minimum CIELAB L value used to equalize the
+%                              red/blue ends; must be >= 53.5 (default: 54)
+%       white_prct : double  - fraction of the map occupied by the white
+%                              center band (default: 0.01)
 %
-%   Output:
-%   map: Nx3 colormap
+%   Outputs:
+%       map : Nx3 double - RGB colormap running red -> white -> blue with
+%             perceptually matched lightness on both ends
 %
 %   Example:
+%       figure
+%       imagesc(peaks(500));
+%       colormap(redblue_equalized);
+%       caxis([-8 8]);  % set +/- caxes equal to center on zero
 %
-%     figure
-%     imagesc(peaks(500));
-%     colormap(redblue_equalized);
-%     caxis([-8 8]); %Must set +- caxes to be equal magnitude to center on zero
+%   See also: equalize_divcmap, redbluemap, blueredbluemap, luminosity, colormap
 %
-%   Copyright 2024 Michael J. Prerau, Ph.D. - http://www.sleepEEG.org
-%
-%   Last modified 02/19/2022
-%********************************************************************
+%   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
+%        Source: https://github.com/preraulab/labcode_main
 
 %Set default N
 if nargin<1

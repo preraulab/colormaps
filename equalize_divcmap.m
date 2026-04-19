@@ -1,25 +1,28 @@
 function cmap_new = equalize_divcmap(cmap,min_L, N, plot_on)
-%% EQUALIZE_DIVCMAP Equalizes CIELAB lightness for divergent colormaps
+%EQUALIZE_DIVCMAP  Equalize CIELAB lightness on the two arms of a divergent colormap
 %
 %   Usage:
-%   cmap_new = equalize_divcmap(cmap, min_L, N, plot_on)
+%       cmap_new = equalize_divcmap(cmap, min_L, N, plot_on)
 %
-%   Input:
-%   cmap: N x 3 divergent colormap
-%   min_L: minimum lux on either end (default:30)
-%   N: Number of points in colormap (final N will be odd to keep max value)
-%   plot_on: plot output (default: false)
+%   Inputs:
+%       cmap    : Nx3 double - divergent RGB colormap to equalize -- required
+%       min_L   : double     - minimum CIELAB L value retained on each end (default: 0.3)
+%       N       : integer    - number of output points; final length will
+%                              be odd to preserve the peak (default: size(cmap, 1))
+%       plot_on : logical    - if true, plot before/after for QA (default: false)
 %
-%   Output:
-%   cmap_new: Nx3 equalized colormap
+%   Outputs:
+%       cmap_new : Nx3 double - divergent colormap resampled so both arms
+%                  share the same CIELAB lightness envelope
 %
 %   Example:
+%       equalize_divcmap;  % run demo
 %
-%     equalize_divcmap; %Run demo
+%   See also: redblue_equalized, luminosity, redbluedark, colormap
 %
-%   Copyright 2024 Michael J. Prerau, Ph.D. - http://www.sleepEEG.org
-%
-%********************************************************************
+%   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
+%        Source: https://github.com/preraulab/labcode_main
+
 if nargin == 0
     cmap = redbluedark;
     equalize_divcmap(cmap,30,500,true);
@@ -92,7 +95,5 @@ end
 function L = getL(cmap)
 LAB = rgb2lab(cmap);
 L = LAB(:,1);
-
-
 
 

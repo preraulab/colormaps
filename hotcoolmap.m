@@ -1,27 +1,28 @@
 function map = hotcoolmap(N, trim_pct)
-%HOTCOOLMAP  Creates a hot/cool colormap
+%HOTCOOLMAP  Divergent hot/cool colormap with dark ends trimmed
 %
 %   Usage:
-%   map = hotcoolmap(N, trim_pct)
+%       map = hotcoolmap(N, trim_pct)
 %
-%   Input:
-%   N: number of points (default: 1024)
-%   trim_pct: percent to trim to differentiate +- colors (default: 0.2)
+%   Inputs:
+%       N        : integer - number of points in the output colormap (default: 1024)
+%       trim_pct : double  - fraction trimmed from each end to drop dark colors
+%                            that confuse +/- readability (default: 0.2)
 %
-%   Output:
-%   map: Nx3 colormap
+%   Outputs:
+%       map : Nx3 double - RGB colormap (cool negative values -> hot positive values)
 %
 %   Example:
+%       figure
+%       imagesc(randn(1000));
+%       colormap(hotcoolmap);
+%       caxis([-3 3]);  % set +/- caxes equal to center on zero
 %
-%     figure
-%     imagesc(randn(1000));
-%     hotcoolmap(redbluemap);
-%     caxis([-3 3]); %Must set +- caxes to be equal magnitude to center on zero
+%   See also: colormap, hot, redbluemap, redblue_equalized, blueredbluemap
 %
-%   Copyright 2024 Michael J. Prerau, Ph.D. - http://www.sleepEEG.org
-%
-%   Last modified 02/19/2022
-%********************************************************************
+%   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
+%        Source: https://github.com/preraulab/labcode_main
+
 %Set default size
 if nargin < 1
     N = 1024;

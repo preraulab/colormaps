@@ -15,6 +15,9 @@ function map = redbluelight(N)
 % Centre for Exploration Targeting
 % The University of Western Australia
 % peter.kovesi at uwa edu au
+%
+%   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
+%        Source: https://github.com/preraulab/labcode_main
 
 map = [0.127567 0.316187 0.858358
        0.146748 0.320479 0.859229

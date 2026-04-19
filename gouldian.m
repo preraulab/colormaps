@@ -1,5 +1,5 @@
 function map = gouldian(N)
-
+% GOULDIAN colormap
 % These colour maps are released under the Creative Commons BY License.
 % A summary of the conditions can be found at
 % https://creativecommons.org/licenses/by/4.0/
@@ -15,6 +15,9 @@ function map = gouldian(N)
 % Centre for Exploration Targeting
 % The University of Western Australia
 % peter.kovesi at uwa edu au
+%
+%   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
+%        Source: https://github.com/preraulab/labcode_main
 
 map = [0.189342 0.189388 0.189376
        0.193131 0.190712 0.199397
@@ -273,7 +276,7 @@ map = [0.189342 0.189388 0.189376
        0.977223 0.969939 0.040620
        0.975415 0.974915 0.038860];
 
-if nargin>0 && ~isempty(N)
+if nargin>0 && ~isempty(N) && N < size(map,1)
         tmap = map;
         tN = size(tmap,1);
         map = zeros(N,3);

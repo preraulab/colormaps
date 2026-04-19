@@ -1,25 +1,23 @@
 function lux = luminosity(RGB_mat)
-%LUMINOSITY Computes luminosity in lux
+%LUMINOSITY  Compute per-row relative luminosity of an RGB colormap
 %
 %   Usage:
-%   lux = luminosity(RGB_mat)
+%       lux = luminosity(RGB_mat)
 %
-%   Input:
-%   RGB_mat: N x 3 divergent colormap
-%   min_lux: minimum lux on either end (default: .3)
-%   N: Number of points in colormap (final N will be odd to keep max value)
-%   plot_on: plot output (default: false)
+%   Inputs:
+%       RGB_mat : Nx3 double - RGB colormap with values in [0, 1] -- required
 %
-%   Output:
-%   lux: 1xN double lux = 0.2126.*R + 0.7152.*G + 0.0722.*B
+%   Outputs:
+%       lux : Nx1 double - luminosity per row, lux = 0.2126*R + 0.7152*G + 0.0722*B
 %
 %   Example:
+%       plot(luminosity(jet));
 %
-%     plot(luminosity(jet));
+%   See also: equalize_divcmap, redblue_equalized, colormap
 %
-%   Copyright 2024 Michael J. Prerau, Ph.D. - http://www.sleepEEG.org
-%
-%********************************************************************
+%   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
+%        Source: https://github.com/preraulab/labcode_main
+
 
 assert(max(RGB_mat,[],'all')<= 1 && min(RGB_mat,[],'all')>=0, 'Error RGB values must be between 0 and 1')
 

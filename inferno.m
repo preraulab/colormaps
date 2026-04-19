@@ -1,4 +1,25 @@
 function [cm_data]=inferno(m)
+%INFERNO  Perceptually uniform black-red-yellow colormap (matplotlib port)
+%
+%   Usage:
+%       cm_data = inferno(m)
+%
+%   Inputs:
+%       m : integer - number of colors to return (default: size of the
+%                     built-in 256-row table)
+%
+%   Outputs:
+%       cm_data : Mx3 double - RGB colormap in [0, 1]
+%
+%   Notes:
+%       Colormap values are taken from matplotlib's "inferno" by
+%       Nathaniel J. Smith and Stefan van der Walt (CC0 / BSD-compatible).
+%       See https://bids.github.io/colormap/.
+%
+%   See also: colormap, viridis, plasma, magma, cividis
+%
+%   ∿∿∿  Prerau Laboratory MATLAB Codebase · sleepEEG.org  ∿∿∿
+%        Source: https://github.com/preraulab/labcode_main
 
 cm = [[  1.46159096e-03,   4.66127766e-04,   1.38655200e-02],
        [  2.26726368e-03,   1.26992553e-03,   1.85703520e-02],
